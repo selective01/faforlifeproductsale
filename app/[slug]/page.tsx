@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!product) return {}
   return {
     title: `${product.name} – Faforlife`,
-    description: product.tagline,
+    description: product.heroTagline,
   }
 }
 
