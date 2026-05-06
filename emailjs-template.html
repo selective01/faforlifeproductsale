@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Order — Faforlife</title>
+</head>
+<body style="margin:0;padding:0;background:#0a0a0a;font-family:'Segoe UI',Arial,sans-serif;">
+
+  <!-- Wrapper -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0a0a0a;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
+
+          <!-- ── HEADER ── -->
+          <tr>
+            <td style="background:#000;padding:24px 20px;border-bottom:3px solid #2ecc40;">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <p style="margin:0;font-size:11px;color:#2ecc40;letter-spacing:4px;text-transform:uppercase;font-weight:700;">
+                      FAFOR&nbsp;&nbsp;LIFE
+                    </p>
+                    <p style="margin:4px 0 0;font-size:22px;font-weight:900;color:#fff;letter-spacing:2px;text-transform:uppercase;">
+                      NEW ORDER RECEIVED
+                    </p>
+                  </td>
+                  <td align="right" style="vertical-align:top;">
+                    <span style="display:inline-block;background:#2ecc40;color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 14px;">
+                      ORDER ALERT
+                    </span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ── PRODUCT BANNER ── -->
+          <tr>
+            <td style="background:#1a6e1a;padding:20px 28px;">
+              <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:3px;text-transform:uppercase;">
+                PRODUCT ORDERED
+              </p>
+              <p style="margin:6px 0 4px;font-size:22px;font-weight:900;color:#fff;letter-spacing:2px;text-transform:uppercase;word-break:break-word;">
+                {{product}}
+              </p>
+              <p style="margin:0;font-size:24px;font-weight:900;color:#fff;letter-spacing:2px;">
+                {{price}}
+              </p>
+            </td>
+          </tr>
+
+          <!-- ── CUSTOMER DETAILS ── -->
+          <tr>
+            <td style="background:#111;padding:24px 20px;">
+              <p style="margin:0 0 20px;font-size:11px;color:#2ecc40;letter-spacing:3px;text-transform:uppercase;font-weight:700;border-bottom:1px solid #222;padding-bottom:12px;">
+                CUSTOMER DETAILS
+              </p>
+
+              <!-- Name -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:2px;">
+                <tr>
+                  <td style="background:#1a1a1a;padding:14px 18px;width:30%;vertical-align:top;">
+                    <p style="margin:0;font-size:10px;color:#2ecc40;letter-spacing:2px;text-transform:uppercase;font-weight:700;">Full Name</p>
+                  </td>
+                  <td style="background:#161616;padding:14px 18px;">
+                    <p style="margin:0;font-size:15px;color:#fff;font-weight:600;">{{from_name}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Phone -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:2px;">
+                <tr>
+                  <td style="background:#1a1a1a;padding:14px 18px;width:30%;vertical-align:top;">
+                    <p style="margin:0;font-size:10px;color:#2ecc40;letter-spacing:2px;text-transform:uppercase;font-weight:700;">Phone Number</p>
+                  </td>
+                  <td style="background:#161616;padding:14px 18px;">
+                    <p style="margin:0;font-size:15px;color:#fff;font-weight:600;">{{phone}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Quantity -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:2px;">
+                <tr>
+                  <td style="background:#1a1a1a;padding:14px 18px;width:30%;vertical-align:top;">
+                    <p style="margin:0;font-size:10px;color:#2ecc40;letter-spacing:2px;text-transform:uppercase;font-weight:700;">Quantity</p>
+                  </td>
+                  <td style="background:#161616;padding:14px 18px;">
+                    <p style="margin:0;font-size:15px;color:#fff;font-weight:600;">{{quantity}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Delivery Address -->
+              <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:2px;">
+                <tr>
+                  <td style="background:#1a1a1a;padding:14px 18px;width:30%;vertical-align:top;">
+                    <p style="margin:0;font-size:10px;color:#2ecc40;letter-spacing:2px;text-transform:uppercase;font-weight:700;">Delivery Address</p>
+                  </td>
+                  <td style="background:#161616;padding:14px 18px;">
+                    <p style="margin:0;font-size:15px;color:#fff;font-weight:600;">{{address}}</p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- State -->
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="background:#1a1a1a;padding:14px 18px;width:30%;vertical-align:top;">
+                    <p style="margin:0;font-size:10px;color:#2ecc40;letter-spacing:2px;text-transform:uppercase;font-weight:700;">State</p>
+                  </td>
+                  <td style="background:#161616;padding:14px 18px;">
+                    <p style="margin:0;font-size:15px;color:#fff;font-weight:600;">{{state}}</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ── ACTION BANNER ── -->
+          <tr>
+            <td style="background:#2ecc40;padding:20px 36px;text-align:center;">
+              <p style="margin:0;font-size:12px;font-weight:900;color:#fff;letter-spacing:2px;text-transform:uppercase;word-break:break-word;">
+                CALL THE CUSTOMER NOW TO CONFIRM THIS ORDER
+              </p>
+            </td>
+          </tr>
+
+          <!-- ── SUMMARY BOX ── -->
+          <tr>
+            <td style="background:#000;padding:20px 16px;">
+              <table width="100%" cellpadding="0" cellspacing="0" style="background:#111;border-left:3px solid #2ecc40;">
+                <tr>
+                  <td style="padding:20px 24px;">
+                    <p style="margin:0 0 14px;font-size:10px;color:#2ecc40;letter-spacing:3px;text-transform:uppercase;font-weight:700;">
+                      ORDER SUMMARY
+                    </p>
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="padding:4px 0;">
+                          <p style="margin:0;font-size:13px;color:#888;">Product</p>
+                        </td>
+                        <td align="right">
+                          <p style="margin:0;font-size:13px;color:#fff;font-weight:600;">{{product}}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0;">
+                          <p style="margin:0;font-size:13px;color:#888;">Price</p>
+                        </td>
+                        <td align="right">
+                          <p style="margin:0;font-size:13px;color:#2ecc40;font-weight:700;">{{price}}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0;">
+                          <p style="margin:0;font-size:13px;color:#888;">Quantity</p>
+                        </td>
+                        <td align="right">
+                          <p style="margin:0;font-size:13px;color:#fff;font-weight:600;">{{quantity}}</p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding:4px 0;">
+                          <p style="margin:0;font-size:13px;color:#888;">State</p>
+                        </td>
+                        <td align="right">
+                          <p style="margin:0;font-size:13px;color:#fff;font-weight:600;">{{state}}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- ── FOOTER ── -->
+          <tr>
+            <td style="background:#000;padding:20px 16px;border-top:1px solid #1a1a1a;text-align:center;">
+              <p style="margin:0 0 4px;font-size:10px;color:#2ecc40;letter-spacing:4px;text-transform:uppercase;font-weight:700;">
+                FAFORLIFE
+              </p>
+              <p style="margin:0;font-size:10px;color:#333;letter-spacing:1px;">
+                www.faforlifeproductsale.online &nbsp;·&nbsp; IN THIS GENERATION MAKE HEALTH YOUR PRIORITY
+              </p>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green: #1a7a2e;
+  --green-dark: #0f5a1e;
+  --green-bright: #22a83c;
+  --black: #0a0a0a;
+  --off-black: #111a12;
+  --card: #161e17;
+  --white: #f4f9f4;
+  --muted: #8aaa8d;
+  --text: #d8ead9;
+  --orange: #e8740c;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: #000;
+  color: #fff;
+  font-family: var(--font-barlow), sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Scroll-triggered fade/slide animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-48px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(48px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+
+/* ── Hero animations ── */
+@keyframes heroSlideIn {
+  from { opacity: 0; transform: translateX(-60px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes heroImageDrop {
+  from { opacity: 0; transform: translateY(-40px) scale(0.9); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes heroPulse {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+.hero-text-anim {
+  animation: heroSlideIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.hero-img-anim {
+  animation: heroImageDrop 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both,
+             heroPulse 4s ease-in-out 1.2s infinite;
+}
+
+/* ── Green bullet dot ping ── */
+@keyframes ping {
+  0%   { transform: scale(1); opacity: 1; }
+  70%  { transform: scale(1.8); opacity: 0; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+.bullet-ping {
+  position: relative;
+}
+.bullet-ping::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #2ecc40;
+  animation: ping 2s ease-out infinite;
+}
+
+/* ── CTA button pulse ── */
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(46,204,64,0.5); }
+  50%       { box-shadow: 0 0 0 14px rgba(46,204,64,0); }
+}
+.cta-pulse {
+  animation: ctaPulse 2.5s ease-in-out infinite;
+}
+
+/* ── Orange banner shimmer ── */
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.orange-shimmer {
+  background: linear-gradient(90deg, #c84b0a 25%, #e05a0a 50%, #c84b0a 75%);
+  background-size: 400px 100%;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* ── Testimonial card hover ── */
+.tcard {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tcard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(46,204,64,0.15);
+}
+
+/* ── Counter number count-up effect (CSS only) ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Fact row slide in ── */
+.fact-row {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fact-row.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Video block hover ── */
+.video-block {
+  transition: transform 0.3s ease;
+}
+.video-block:hover {
+  transform: scale(1.01);
+}
+
+/* ── Responsive layout classes ── */
+@media (max-width: 700px) {
+  .hero-section { grid-template-columns: 1fr !important; }
+  .about-grid   { grid-template-columns: 1fr !important; gap: 28px !important; }
+  .t-grid       { grid-template-columns: 1fr !important; }
+  .form-layout  { grid-template-columns: 1fr !important; }
+  .form-divider { display: none !important; }
+  .form-img     { margin-top: 48px !important; width: 100% !important; max-width: 100% !important; }
+}
