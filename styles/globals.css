@@ -171,3 +171,36 @@ body {
   .form-divider { display: none !important; }
   .form-img     { margin-top: 48px !important; width: 100% !important; max-width: 100% !important; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-text-anim,
+  .hero-img-anim,
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .fact-row,
+  .bullet-ping::after,
+  .orange-shimmer,
+  .glow,
+  .cta-pulse {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+/* Only run heavy animations after page load */
+.hero-img-anim {
+  animation-delay: 0.5s;
+}
+
+.bullet-ping::after {
+  animation-delay: 1s;
+}
+
+.orange-shimmer {
+  animation-delay: 1.5s;
+}

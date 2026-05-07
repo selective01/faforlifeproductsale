@@ -170,7 +170,7 @@ function VideoPlayer({
             style={{ position: 'absolute', inset: 0, cursor: 'pointer' }}
           >
             {/* YouTube thumbnail */}
-            <Image src={thumbUrl} alt={v.title} fill style={{ objectFit: 'cover' }} unoptimized />
+            <Image src={thumbUrl} alt={v.title} fill style={{ objectFit: 'cover' }} sizes="(max-width:700px) 100vw, 33vw" />
             {/* Dark overlay */}
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.65) 100%)' }} />
             {/* Play button */}
@@ -230,14 +230,24 @@ export default function ProductLandingPage({ product }: { product: Product }) {
   const handleVideoPlay = useCallback((id: string) => setActiveVideo(id), [])
 
   useEffect(() => {
-    const obs = new IntersectionObserver(
-      (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible') }),
-      { threshold: 0.1 }
-    )
-    containerRef.current
-      ?.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .fact-row')
-      .forEach((el) => obs.observe(el))
-    return () => obs.disconnect()
+    const setup = () => {
+      const obs = new IntersectionObserver(
+        (entries) => entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible') }),
+        { threshold: 0.1 }
+      )
+      containerRef.current
+        ?.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale,.fact-row')
+        .forEach((el) => obs.observe(el))
+      return () => obs.disconnect()
+    }
+
+    // Defer until browser is idle so it doesn't block LCP
+    if ('requestIdleCallback' in window) {
+      const id = requestIdleCallback(setup)
+      return () => cancelIdleCallback(id)
+    } else {
+      return setup()
+    }
   }, [])
 
   const handle = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) =>
@@ -294,7 +304,7 @@ export default function ProductLandingPage({ product }: { product: Product }) {
         <div style={{ background: 'linear-gradient(135deg, #1a5c1a 0%, #2ecc40 60%, #1a8c1a 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '460px', overflow: 'hidden', padding: '24px', position: 'relative' }}>
           <div style={{ position: 'absolute', width: '320px', height: '320px', borderRadius: '50%', background: 'rgba(255,255,255,0.08)', top: '50%', left: '50%', transform: 'translate(-50%,-50%)' }} />
           <div className="hero-img-anim" style={{ position: 'relative', width: '100%', height: '420px' }}>
-            <Image src={product.image} alt={product.name} fill style={{ objectFit: 'contain', objectPosition: 'center bottom' }} priority />
+            <Image src={product.image} alt={product.name} fill style={{ objectFit: 'contain' }} priority sizes="50vw" />
           </div>
         </div>
       </section>
@@ -555,7 +565,7 @@ export default function ProductLandingPage({ product }: { product: Product }) {
                 <div className="form-divider" style={{ width: '1px', background: 'rgba(255,255,255,0.4)', alignSelf: 'stretch', margin: '0 32px' }} />
                 <div className="form-img" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                   <div style={{ position: 'relative', width: '100%', maxWidth: '340px', height: '360px' }}>
-                    <Image src={product.image} alt={product.name} fill style={{ objectFit: 'contain' }} />
+                    <Image src={product.image} alt={product.name} fill style={{ objectFit: 'contain' }} sizes="30vw" />
                   </div>
                 </div>
               </div>
@@ -567,7 +577,7 @@ export default function ProductLandingPage({ product }: { product: Product }) {
       {/* ══ SITE FOOTER ══ */}
       <div style={{ background: '#0a0a0a', borderTop: '1px solid #111', padding: '18px 32px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
         <div style={{ position: 'relative', width: '110px', height: '34px' }}>
-          <Image src="/images/logo.png" alt="Faforlife" fill style={{ objectFit: 'contain', objectPosition: 'left' }} />
+          <Image src="/images/logo.png" alt="Faforlife" fill style={{ objectFit: 'contain', objectPosition: 'left' }} sizes="110px" />
         </div>
         <span style={{ fontSize: '0.7rem', color: '#333' }}>© {new Date().getFullYear()} Faforlife · www.faforlifeproductsale.online</span>
       </div>
