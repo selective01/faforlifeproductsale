@@ -579,7 +579,7 @@ export default function ProductLandingPage({ product }: { product: Product }) {
         <div style={{ position: 'relative', width: '110px', height: '34px' }}>
           <Image src="/images/logo.png" alt="Faforlife" fill style={{ objectFit: 'contain', objectPosition: 'left' }} sizes="110px" />
         </div>
-        <span style={{ fontSize: '0.7rem', color: '#333' }}>© {new Date().getFullYear()} Faforlife · www.faforlifeproductsale.online</span>
+        <span style={{ fontSize: '0.7rem', color: '#333' }}>© {new Date().getFullYear()} Faforlife · healthconvat.com</span>
       </div>
 
       {/* ══ RESPONSIVE ══ */}
