@@ -26,11 +26,11 @@ const condensed = Barlow_Condensed({
 export const metadata: Metadata = {
   title: 'Faforlife Products',
   description: 'Natural health and wellness products by Faforlife.',
-  metadataBase: new URL('https://www.faforlifeproductsale.online'),
+  metadataBase: new URL('https://healthconvat.com/'),
   openGraph: {
     title: 'Faforlife — Natural Health Products',
     description: 'Natural health and wellness products trusted by millions across Nigeria.',
-    url: 'https://www.faforlifeproductsale.online',
+    url: 'https://healthconvat.com/',
     siteName: 'Faforlife',
     images: [
       {
