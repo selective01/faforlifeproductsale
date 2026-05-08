@@ -123,9 +123,9 @@ const products: Product[] = [
 
     // Main videos — Follow Our Testifiers (stacked full width)
     videos: [
-      { id: '/videos/faforon_video_testimony(1).mp4', title: 'My experience with FAFORON', person: 'Mrs. Vivian O.' },
-      { id: '/videos/faforon_video_testimony(2).mp4', title: 'How FAFORON changed my health', person: 'Emeka Obi' },
-      { id: '/videos/faforon_video_testimony(3).mp4', title: 'FAFORON — 3 month review', person: 'Ngozi Eze' },
+      { id: '/videos/faforon_video_testimony(1).mp4', title: 'MY EXPERIENCE WITH FAFORON', person: 'Mrs. Vivian O.' },
+      { id: '/videos/faforon_video_testimony(2).mp4', title: 'HOW FAFORON CHANGED MY HEALTH', person: 'Emeka Obi' },
+      { id: '/videos/faforon_video_testimony(3).mp4', title: 'FAFORON — 3 MONTH REVIEW', person: 'Ngozi Eze' },
     ],
 
     // So What Will You Do
@@ -134,10 +134,10 @@ const products: Product[] = [
     // Health Practitioners — 3-column video grid
     practitionersLabel: 'WHAT HEALTH PRACTITIONERS SAY ABOUT FAFORON',
     practitionerVideos: [
-      { id: '/videos/professor_fafure.mp4', title: 'Professor Fafure dissecting Faforon\'s hematopoietic pathway', person: 'Faforon Founder' },
-      { id: '/videos/medical_practitioner.mp4', title: 'A Medical Practitioner Excerpt on the Efficacy Faforon', person: 'Medical Doctor' },
-      { id: '/videos/health_practitioner_nurse(2).mp4', title: 'A NURSE EDUCATING HER SICKLE CELL WARRIORS ABOUT FAFORON - PART 2', person: 'Nurse Practitioner' },
-      { id: '/videos/health_practitioner_nurse(1).mp4', title: 'A NURSE EDUCATING HER SICKLE CELL WARRIORS ABOUT FAFORON', person: 'Nurse Practitioner' },
+      { id: '/videos/professor_fafure.mp4', title: 'PROFESSOR FAFURE DISSECTING FAFORON\'S HEMATOPOIETIC PATHWAY', person: 'CHIEF PRODUCT DEVELOPMENT SCIENTIST' },
+      { id: '/videos/medical_practitioner.mp4', title: 'A MEDICAL PRACTITIONER EXCERPT ON THE EFFICACY FAFORON', person: 'MEDICAL DOCTOR' },
+      { id: '/videos/health_practitioner_nurse(2).mp4', title: 'A NURSE EDUCATING HER SICKLE CELL WARRIORS ABOUT FAFORON - PART 2', person: 'NURSE PRACTITIONER' },
+      { id: '/videos/health_practitioner_nurse(1).mp4', title: 'A NURSE EDUCATING HER SICKLE CELL WARRIORS ABOUT FAFORON', person: 'NURSE PRACTITIONER' },
     ],
 
     // Stats + Trust Badges
