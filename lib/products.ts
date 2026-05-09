@@ -135,9 +135,9 @@ const products: Product[] = [
     practitionersLabel: 'WHAT HEALTH PRACTITIONERS SAY ABOUT FAFORON',
     practitionerVideos: [
       { id: '/videos/professor_fafure.mp4', title: 'PROFESSOR FAFURE DISSECTING FAFORON\'S HEMATOPOIETIC PATHWAY', person: 'CHIEF PRODUCT DEVELOPMENT SCIENTIST' },
-      { id: '/videos/medical_practitioner.mp4', title: 'A MEDICAL PRACTITIONER EXCERPT ON THE EFFICACY FAFORON', person: 'MEDICAL DOCTOR' },
-      { id: '/videos/health_practitioner_nurse(2).mp4', title: 'A NURSE EDUCATING HER SICKLE CELL WARRIORS ABOUT FAFORON - PART 2', person: 'NURSE PRACTITIONER' },
-      { id: '/videos/health_practitioner_nurse(1).mp4', title: 'A NURSE EDUCATING HER SICKLE CELL WARRIORS ABOUT FAFORON', person: 'NURSE PRACTITIONER' },
+      { id: '/videos/medical_practitioner.mp4', title: 'A MEDICAL PRACTITIONER EXCERPT ON THE EFFICACY OF FAFORON', person: 'MEDICAL DOCTOR' },
+      { id: '/videos/health_practitioner_nurse(2).mp4', title: 'A NURSE EDUCATING HER SICKLE CELL WARRIORS ABOUT FAFORON', person: 'NURSE PRACTITIONER' },
+      { id: '/videos/health_practitioner_nurse(1).mp4', title: 'A NURSE EDUCATING HER SICKLE CELL WARRIORS ABOUT FAFORON - PART 2', person: 'NURSE PRACTITIONER' },
     ],
 
     // Stats + Trust Badges
