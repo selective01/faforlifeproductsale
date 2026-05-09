@@ -125,7 +125,7 @@ const products: Product[] = [
     videos: [
       { id: '/videos/faforon_video_testimony(1).mp4', title: 'MY EXPERIENCE WITH FAFORON', person: 'Mrs. Vivian O.' },
       { id: '/videos/faforon_video_testimony(2).mp4', title: 'HOW FAFORON CHANGED MY HEALTH', person: 'Emeka Obi' },
-      { id: '/videos/faforon_video_testimony(3).mp4', title: 'FAFORON — 3 MONTH REVIEW', person: 'Ngozi Eze' },
+      { id: '/videos/faforon_video_testimony(3).mp4', title: 'HOW FAFORON CHANGED MY HEALTH', person: 'Emeka Obi ' },
     ],
 
     // So What Will You Do

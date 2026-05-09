@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Faforlife — Natural Health Products',
     description: 'Natural health and wellness products trusted by millions across Nigeria.',
-    url: 'https://healthconvat.com/',
+    url: 'https://healthconvat.com/faforon',
     siteName: 'Faforlife',
     images: [
       {
