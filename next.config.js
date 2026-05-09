@@ -6,8 +6,19 @@ const nextConfig = {
       { protocol: 'https', hostname: 'img.youtube.com' },
     ],
   },
+
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/faforon',
+        permanent: true,
+      },
+    ]
   },
 }
 
